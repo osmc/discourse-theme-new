@@ -28,23 +28,10 @@ body code, body pre {
 p code, code {
     font-size: 0.9em;
     padding: 0.1em 0.3em;
-    background: #d5e8f7;
     border-radius: 1px;
 }
 pre {
     padding: 0.5em;
-}
-pre code {
-    background: #d5e8f7;
-}
-
-pre, blockquote, aside.quote .title, aside.onebox, a.mention {
-    background: #d5e8f7;
-    background-color: #d5e8f7;
-}
-
-blockquote, aside.quote .title, aside.onebox {
-    border-left-color: #c4d8e8;
 }
 
 .d-header {
