@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: "Open Sans";
+}
+
+html {
+    font-size: 14.5px
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.body-page ul p, .body-page ol p, .body-page ul, .body-page ol {
+    font-size: 1.143rem;
+}
+
+.body-page h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+body code, body pre {
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+p code, code {
+    font-size: 0.9em;
+    padding: 0.1em 0.3em;
+    background: #d5e8f7;
+    border-radius: 1px;
+}
+pre {
+    padding: 0.5em;
+}f
+pre code {
+    background: #d5e8f7;
+}
+
+pre, blockquote, aside.quote .title, aside.onebox, a.mention {
+    background: #d5e8f7;
+    background-color: #d5e8f7;
+}
+
+blockquote, aside.quote .title, aside.onebox {
+    border-left-color: #c4d8e8;
+}
+
+a, .btn, button {
+    border-radius: 1px;
+}
+
+.d-header {
+    padding-top: 0px;
+    box-shadow: none;
+    border-bottom: 2px solid #293FEB;
+    height: 60px;
+    @media (max-width: 40em) {
+        height: 45px;
+    }
+}
+
+.d-header .wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.d-header .contents {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.d-header .title {
+    order: 0;
+}
+
+.d-header .panel {
+    order: 2;
+    margin-left: auto;
+    margin-right: 1.5em;
+}
+
+.d-header #site-logo.logo-big {
+    width: auto;
+}
+
+.d-header .icons .icon {
+    color: #535353;
+}
+
+.d-header .title-wrapper {
+    margin-left: 0.1em;
+}
+
+#main-outlet {
+    @media (min-width: 40em) {
+        padding-top: 90px;
+    }
+}
+
+.extra-info .title-wrapper h1 {
+    font-size: 1.2em;
+}
+
+.extra-info .title-wrapper .badge-wrapper.box {
+    font-size: 80%;
+    margin-top: 3px;
+}
+
+.container {
+    max-width: 75em;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+#banner {
+    border-radius: 0px;
+    background: rgb(238, 238, 238);
+    box-shadow: none;
+}
+
+.cooked li {
+    margin: 0.5em 0;
+}
+
+// Hide default category
+
+ul.category-links {
+    li.category-link:nth-child(2) {
+        display: none;
+    }
+}
+
+// unlist Wiki
+
+.topic-list {
+    [data-category_id="17"] {
+        display: none;
+    }
+}
+
+// Toplist ad
+
+.toplist_ad {
+    text-align: center;
+}
+
+.toplist_ad div:first-child {
+    margin-top: 0.4em;
+}
+
+.full-width {
+    margin-top: 0.4em;
+}
+
+.toplist_ad iframe {
+    border: 1px solid #d8e5f5 !important;
+}
+
+// donate button
+
+.list-controls {
+  max-width: 75em;
+}
+
+.btn.donate-button {
+    background-color: #58d8b1;
+}
+.btn.donate-button:hover {
+    color: #04090f;
+    background-color: #66efc5;
+}
+
+// adsense plugin
+
+.adsense {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .osmc-container {
+        display: none !important;
+    }
+}
+ 
+@media screen and (min-width: 1024px) {
+    span#osmc-top-links {
+        display: block !important;
+        margin: 10px 0 0 0;
+    }
+    div#osmc-navbar {
+        max-width: none;
+        width: auto;
+        z-index: 1040;
+        position: fixed;
+        top: 0;
+        left: 38%;
+    }
+    .nav-link-container li {
+        display: inline-block;
+        float: left;
+    }
+    .nav-link-container a {
+        text-decoration: none;
+        text-align: center;
+        line-height: 48px;
+        font-size: 14px;
+        padding: 0 1em;
+    }
+    .d-header .icons .icon {
+        float: right;
+    }
+    .nav-link-container {
+        display: inline
+    }
+}
+
+.d-header .title { float: left; }
+
+//.spinner{
+//margin: 20px auto 20px auto;
+//position: relative;
+//webkit-animation: none;
+//animation: none;
+//height: 128px; //Modify to the size of your icon
+//width: 128px; //Modify to the size of your icon
+//background:url("https://discourse.osmc.tv/uploads/default/_emoji/osmc.png?v=3");
+//border: none; //Remove Border
+//border-radius:0; //Remove rounding
+//}
+
+@media screen and (min-width: 975px){
+    .menu-container-osmc-links-mobile, .menu-container-osmc-colored-links {
+      display: none;
+    }
+    .d-header {
+        height: auto !important;
+    }
+    .d-header .wrap {
+        position: static !important;
+    }
+    .d-header .contents {
+        display: block !important;
+        margin: 8px 0 !important;
+    }
+    .extra-info-wrapper {
+        overflow: visible;
+    }
+}

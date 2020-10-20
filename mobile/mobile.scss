@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+    font-size: 14.5px;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.body-page ul p, .body-page ol p, .body-page ul, .body-page ol {
+    font-size: 1.143rem;
+}
+
+.body-page h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+body code, body pre {
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+p code, code {
+    font-size: 0.9em;
+    padding: 0.1em 0.3em;
+    background: #d5e8f7;
+    border-radius: 1px;
+}
+pre {
+    padding: 0.5em;
+}
+pre code {
+    background: #d5e8f7;
+}
+
+pre, blockquote, aside.quote .title, aside.onebox, a.mention {
+    background: #d5e8f7;
+    background-color: #d5e8f7;
+}
+
+blockquote, aside.quote .title, aside.onebox {
+    border-left-color: #c4d8e8;
+}
+
+.d-header {
+    padding-top: 0px;
+    box-shadow: none;
+    border-bottom: 2px solid #293FEB;
+    height: 60px;
+    @media (max-width: 40em) {
+        height: 45px;
+    }
+}
+
+.d-header .wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.d-header .contents {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.d-header .title {
+    order: 0;
+}
+
+.d-header .panel {
+    order: 2;
+    margin-left: auto;
+    margin-right: 1.5em;
+}
+
+.d-header #site-logo.logo-big {
+    max-height: 1.75em;
+    width: auto;
+}
+
+#main-outlet {
+    @media (min-width: 40em) {
+        padding-top: 90px;
+    }
+}
+
+.extra-info .title-wrapper h1 {
+    font-size: 1.2em;
+}
+
+.extra-info .title-wrapper .badge-wrapper.box {
+    font-size: 80%;
+    margin-top: 3px;
+}
+
+.container {
+    max-width: 75em;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+#banner {
+    border-radius: 0px;
+    background: rgb(238, 238, 238);
+    box-shadow: none;
+}
+
+.cooked li {
+    margin: 0.5em 0;
+}
+
+// Hide default category
+
+ul.category-links {
+    li.category-link:nth-child(2) {
+        display: none;
+    }
+}
+
+// unlist Wiki
+
+.topic-list {
+    [data-category_id="17"] {
+        display: none;
+    }
+}
+
+// Toplist ad
+
+.toplist_ad {
+    text-align: center;
+}
+
+.toplist_ad div:first-child {
+    margin-top: 0.4em;
+}
+
+.full-width {
+    margin-top: 0.4em;
+}
+
+.toplist_ad iframe {
+    border: 1px solid #d8e5f5 !important;
+}
+
+// donate button
+
+.list-controls {
+  max-width: 75em;
+}
+
+.btn.donate-button {
+    background-color: #58d8b1;
+}
+.btn.donate-button:hover {
+    color: #04090f;
+    background-color: #66efc5;
+}
+
+// adsense plugin
+
+.adsense {
+    margin: 0;
+    padding: 0;
+}
+
+.header-links-wrapper {
+    @media screen and (max-width: 974px){
+      display: none;
+    }
+}
