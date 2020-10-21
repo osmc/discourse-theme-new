@@ -132,8 +132,8 @@ header .header-links-wrapper .header-link.with-child:hover .header-links-wrapper
 }
 header .header-links-wrapper .header-link.with-child .header-links-wrapper .header-sublink {
     padding: 14px;
-    font-size: 12px;
-    color: #ccc;
+    font-size: 15px;
+    color: var(--primary);
     border-bottom: 1px solid var(--primary-low);
     display: block;
 }
