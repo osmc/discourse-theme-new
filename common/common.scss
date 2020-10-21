@@ -31,7 +31,7 @@ header .header-links-wrapper .header-link::after {
     -ms-transform: scaleX(0);
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    border-top: 2px solid #293feb;
+    border-top: 2px solid var(--tertiary);
     content: "";
     padding-bottom: inherit;
 }
@@ -108,7 +108,7 @@ header .header-links-wrapper .header-link {
     margin-right: 10px;
 }
 header .header-links-wrapper .header-link.big.blue {
-    background-color: #293feb !important;
+    background-color: var(--tertiary) !important;
 }
 header .header-links-wrapper .header-link.big {
     color: #fff !important;
@@ -122,7 +122,7 @@ header .header-links-wrapper .header-link.with-child .header-links-wrapper {
     width: 8em;
     display: none;
     position: absolute;
-    background: #1C1C1C;
+    background: var(--secondary);
     box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     left: -2em;
     top: 2em;
@@ -134,11 +134,11 @@ header .header-links-wrapper .header-link.with-child .header-links-wrapper .head
     padding: 14px;
     font-size: 12px;
     color: #ccc;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--primary-low);
     display: block;
 }
 header .header-links-wrapper .header-link.with-child .header-links-wrapper .header-sublink.active {
-    color: #293feb;
+    color: var(--tertiary);
 }
 .menu-panel ul.menu-links li a.osmc-link-pink {
     color: #fff;
@@ -146,7 +146,7 @@ header .header-links-wrapper .header-link.with-child .header-links-wrapper .head
 }
 .menu-panel ul.menu-links li a.osmc-link-blue {
     color: #fff;
-    background-color: #293feb !important;
+    background-color: var(--tertiary) !important;
 }
 .post-notice {
   display: none;

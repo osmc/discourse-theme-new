@@ -37,7 +37,7 @@ pre {
 .d-header {
     padding-top: 0px;
     box-shadow: none;
-    border-bottom: 2px solid #293FEB;
+    border-bottom: 2px solid var(--tertiary);
     height: 60px;
     @media (max-width: 40em) {
         height: 45px;
