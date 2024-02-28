@@ -125,7 +125,7 @@
 
   osmcLinks.forEach(link => {
     const { href, className, label } = link;
-	api.addCommunitySectionLink((baseSectionLink) => {
+    api.addCommunitySectionLink((baseSectionLink) => {
       return class CustomSectionLink extends baseSectionLink {
         name = `osmcLink-${index + 1}`;
         href = href;
