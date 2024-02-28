@@ -125,15 +125,27 @@
 
   osmcLinks.forEach(link => {
     const { href, className, label } = link;
-    api.decorateWidget(`hamburger-menu:generalLinks`, () => {
-      return { href, rawLabel: label, className }
-    });
+	api.addCommunitySectionLink((baseSectionLink) => {
+      return class CustomSectionLink extends baseSectionLink {
+        name = `osmcLink-${index + 1}`;
+        href = href;
+        route = "";
+        text = label;
+        title = label;
+      };
+    }, false);
   });
 
   osmcColoredLinks.forEach(link => {
     const { href, className, label } = link;
-    api.decorateWidget(`hamburger-menu:footerLinks`, () => {
-      return { href, rawLabel: label, className }
-    });
+    api.addCommunitySectionLink((baseSectionLink) => {
+      return class CustomSectionLink extends baseSectionLink {
+        name = `osmcColoredLink-${index + 1}`;
+        href = href;
+        route = "";
+        text = label;
+        title = label;
+      };
+    }, false);
   });
 </script>
