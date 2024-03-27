@@ -123,7 +123,7 @@
   osmcColoredLinks.push({ href: "https://osmc.tv/vero", className: "osmc-link-pink", label: "Vero 4K +" });
   osmcColoredLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "osmc-link-blue", label: "My Account" });
 
-  osmcLinks.forEach(link => {
+  osmcLinks.forEach((link, index) => {
     const { href, className, label } = link;
     api.addCommunitySectionLink((baseSectionLink) => {
       return class CustomSectionLink extends baseSectionLink {
@@ -136,7 +136,7 @@
     }, false);
   });
 
-  osmcColoredLinks.forEach(link => {
+  osmcColoredLinks.forEach((link, index) => {
     const { href, className, label } = link;
     api.addCommunitySectionLink((baseSectionLink) => {
       return class CustomSectionLink extends baseSectionLink {
