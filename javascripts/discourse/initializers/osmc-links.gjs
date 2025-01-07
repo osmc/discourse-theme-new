@@ -18,6 +18,8 @@ export default {
         osmcLinks.push({ href: "https://osmc.tv/store", className: "header-link", label: "Shop" });
         osmcLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero 4K +" });
         osmcLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
+		
+        let headerIcons = [];
 
         osmcLinks.forEach((link) => {
             const linkTemplate = 
@@ -29,8 +31,9 @@ export default {
                     {{link.label}}
                 </a>
             </template>;
-            api.headerIcons.add("osmc", linkTemplate, { before: "search" });
+            headerIcons.push(linkTemplate);
         });
+        api.headerIcons.add(link.label, <template><div class="header-links-wrapper clearfix">{{headerIcons}}</div></template>, { before: "search" });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
