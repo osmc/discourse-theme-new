@@ -8,15 +8,15 @@ export default {
         let osmcLinks = [];
 
         osmcLinks.push({ href: "https://osmc.tv/", className: "header-link", label: "Home" });
-        osmcLinks.push({ href: "https://osmc.tv/blog", className: "header-link", label: "Blog" });
         osmcLinks.push({ href: "https://osmc.tv/about", className: "header-link", label: "About" });
+        osmcLinks.push({ href: "https://osmc.tv/blog", className: "header-link", label: "Blog" });
         osmcLinks.push({ href: "https://osmc.tv/download", className: "header-link", label: "Download" });
         osmcLinks.push({ href: "https://osmc.tv/wiki", className: "header-link", label: "Wiki" });
         osmcLinks.push({ href: "https://osmc.tv/contact", className: "header-link", label: "Contact" });
         osmcLinks.push({ href: "https://github.com/osmc/osmc", className: "header-link", label: "GitHub" });
         osmcLinks.push({ href: "https://osmc.tv/wiki/development/reporting-bugs", className: "header-link", label: "Report Bugs" });
         osmcLinks.push({ href: "https://osmc.tv/store", className: "header-link", label: "Shop" });
-        osmcLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero 4K +" });
+        osmcLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero V" });
         osmcLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
 		
         let headerIcons = [];
