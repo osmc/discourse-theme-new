@@ -33,7 +33,7 @@ export default {
             </template>;
             headerIcons.push(linkTemplate);
         });
-        api.headerIcons.add("osmc", <template><div class="header-links-wrapper clearfix">{{...@headerIcons}}</div></template>, { before: "search" });
+        api.headerIcons.add("osmc", <template><div class="header-links-wrapper clearfix">{{#each headerIcons as |icon|}}{{icon}}{{/each}}</div></template>, { before: "search" });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
