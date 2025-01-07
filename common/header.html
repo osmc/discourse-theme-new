@@ -1,151 +1,40 @@
 <script type="text/discourse-plugin" version="0.8">
-  const { h } = require('virtual-dom');
 
   // header links
 
-  api.createWidget("osmc-links-desktop", {
-    tagName: "div.header-links-wrapper.clearfix",
-
-    html() {
-      const links = [];
-
-      links.push(h("a.header-link", {
-        target: "_blank"  ,
-        href: "https://osmc.tv/"
-      },
-      "Home" ));
-
-      links.push(h("a.header-link", {
-        target: "_blank"  ,
-        href: "https://osmc.tv/about/"
-      },
-      "About" ));
-
-      links.push(h("a.header-link", {
-        target: "_blank",
-        href: "https://osmc.tv/blog/"
-      },
-      "Blog"
-      ));
-
-      links.push(h("a.header-link", {
-        target: "_blank",
-        href: "https://osmc.tv/download/"
-      },
-      "Download"
-      ));
-
-      links.push(h("div.header-link.with-child.active", {},
-        [
-          "Support",
-          h("div.header-links-wrapper", {},
-            [
-              h("a.header-sublink.active", {
-                target: "_blank",
-                href: "https://discourse.osmc.tv"
-              }, "Community"),
-              h("a.header-sublink", {
-                target: "_blank",
-                href: "https://osmc.tv/wiki"
-              }, "Wiki"),
-              h("a.header-sublink", {
-                target: "_blank",
-                href: "https://osmc.tv/contact/"
-              }, "Contact")
-            ]
-          )
-        ]
-      ));
-
-      links.push(h("div.header-link.with-child", {},
-        [
-          "Contribute",
-          h("div.header-links-wrapper", {},
-            [
-              h("a.header-sublink", {
-                target: "_blank",
-                href: "https://github.com/osmc/osmc"
-              }, "GitHub"),
-              h("a.header-sublink", {
-                target: "_blank",
-                href: "https://osmc.tv/wiki/development/reporting-bugs"
-              }, "Report Bugs")
-            ]
-          )
-        ]
-      ));
-
-      links.push(h("a.header-link", {
-        target: "_blank",
-        href: "https://osmc.tv/store"
-      },
-      "Shop"
-      ));
-
-      links.push(h("a.header-link.big.pink", {
-        target: "_blank",
-        href: "https://osmc.tv/vero"
-      },
-      "Vero V"
-      ));
-
-      links.push(h("a.header-link.big.blue", {
-        target: "_blank",
-        href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/"
-      },
-      "My Account"
-      ));
-
-      return links;
-    }
-  });
-
-  api.decorateWidget('header-buttons:before', helper => {
-    return [helper.attach("osmc-links-desktop")];
-  });
-
-  /* hamburger links
-
   let osmcLinks = [];
 
-  osmcLinks.push({ href: "https://osmc.tv/", className: "osmc-link", label: "Home" });
-  osmcLinks.push({ href: "https://osmc.tv/blog", className: "osmc-link", label: "Blog" });
-  osmcLinks.push({ href: "https://osmc.tv/about", className: "osmc-link", label: "About" });
-  osmcLinks.push({ href: "https://osmc.tv/download", className: "osmc-link", label: "Download" });
-  osmcLinks.push({ href: "https://osmc.tv/wiki", className: "osmc-link", label: "Wiki" });
-  osmcLinks.push({ href: "https://osmc.tv/contact", className: "osmc-link", label: "Contact" });
-  osmcLinks.push({ href: "https://github.com/osmc/osmc", className: "osmc-link", label: "GitHub" });
-  osmcLinks.push({ href: "https://osmc.tv/wiki/development/reporting-bugs", className: "osmc-link", label: "Report Bugs" });
-  osmcLinks.push({ href: "https://osmc.tv/store", className: "osmc-link", label: "Shop" });
+  osmcLinks.push({ href: "https://osmc.tv/", className: "header-link", label: "Home" });
+  osmcLinks.push({ href: "https://osmc.tv/blog", className: "header-link", label: "Blog" });
+  osmcLinks.push({ href: "https://osmc.tv/about", className: "header-link", label: "About" });
+  osmcLinks.push({ href: "https://osmc.tv/download", className: "header-link", label: "Download" });
+  osmcLinks.push({ href: "https://osmc.tv/wiki", className: "header-link", label: "Wiki" });
+  osmcLinks.push({ href: "https://osmc.tv/contact", className: "header-link", label: "Contact" });
+  osmcLinks.push({ href: "https://github.com/osmc/osmc", className: "header-link", label: "GitHub" });
+  osmcLinks.push({ href: "https://osmc.tv/wiki/development/reporting-bugs", className: "header-link", label: "Report Bugs" });
+  osmcLinks.push({ href: "https://osmc.tv/store", className: "header-link", label: "Shop" });
 
   let osmcColoredLinks = [];
 
-  osmcColoredLinks.push({ href: "https://osmc.tv/vero", className: "osmc-link-pink", label: "Vero 4K +" });
-  osmcColoredLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "osmc-link-blue", label: "My Account" });
-
-  osmcLinks.forEach((link, index) => {
-    const { href, className, label } = link;
-    api.addCommunitySectionLink((baseSectionLink) => {
-      return class CustomSectionLink extends baseSectionLink {
-        name = `osmcLink-${index + 1}`;
-        href = href;
-        route = "";
-        text = label;
-        title = label;
-      };
-    }, false);
-  });
-
-  osmcColoredLinks.forEach((link, index) => {
-    const { href, className, label } = link;
-    api.addCommunitySectionLink((baseSectionLink) => {
-      return class CustomSectionLink extends baseSectionLink {
-        name = `osmcColoredLink-${index + 1}`;
-        href = href;
-        route = "";
-        text = label;
-        title = label;
-      };
-    }, false);
-  });*/
+  osmcColoredLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero 4K +" });
+  osmcColoredLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
+  
+  const linkTemplate = (link) => <template>
+    <a
+      class={{link.className}}
+    >
+      <a
+        href={{link.href}}
+      >
+        {{link.label}}
+    </a>
+  </template>;
+  
+  osmcLinks.forEach((link) => {
+	api.headerIcons.add("osmc", linkTemplate(link), { before: "search" });
+  }});
+  
+  osmcColoredLinks.forEach((link) => {
+	api.headerIcons.add("osmc", linkTemplate(link), { before: "search" });
+  }});
 </script>
