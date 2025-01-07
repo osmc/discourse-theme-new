@@ -30,7 +30,7 @@ export default {
                 </a>
             </template>;
             api.headerIcons.add("osmc", linkTemplate, { before: "search" });
-        }});
+        });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
