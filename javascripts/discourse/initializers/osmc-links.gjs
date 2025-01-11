@@ -12,7 +12,7 @@ export default {
         osmcLinks.push({ href: "https://osmc.tv/blog", className: "header-link", label: "Blog" });
         osmcLinks.push({ href: "https://osmc.tv/download", className: "header-link", label: "Download" });
         osmcLinks.push({ label: "Support", sublinks: [{ href: "https://discourse.osmc.tv", className: "header-sublink", label: "Community" },{ href: "https://osmc.tv/wiki", className: "header-sublink", label: "Wiki" },{ href: "https://osmc.tv/contact", className: "header-sublink", label: "Contact" }]});
-        osmcLinks.push({ label: "Contribute", sublinks: [{ href: "https://github.com/osmc/osmc", className: "header-sublink", label: "GitHub" },{ href: "https://osmc.tv/wiki/development/reporting-bugs", className: "header-link", label: "Report Bugs" }}]);
+        osmcLinks.push({ label: "Contribute", sublinks: [{ href: "https://github.com/osmc/osmc", className: "header-sublink", label: "GitHub" },{ href: "https://osmc.tv/wiki/development/reporting-bugs", className: "header-link", label: "Report Bugs" }]});
         osmcLinks.push({ href: "https://osmc.tv/store", className: "header-link", label: "Shop" });
         osmcLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero V" });
         osmcLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
