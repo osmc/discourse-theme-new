@@ -21,6 +21,7 @@ export default {
         let sublinks = [];
 
         osmcLinks.forEach((link) => {
+			sublinks = [];
             if(link.sublinks){
                 link.sublinks.forEach((sublink) => {
                     const sublinkTemplate = 
@@ -58,7 +59,6 @@ export default {
                 </template>;
                 headerIcons.push(linkTemplate);
             }
-			sublinks = [];
         });
         api.headerIcons.add("osmc", <template><div class="header-links-wrapper clearfix">{{#each headerIcons as |icon|}}{{icon}}{{/each}}</div></template>, { before: "search" });
       } catch (error) {
