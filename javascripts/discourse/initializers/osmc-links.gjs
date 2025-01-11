@@ -23,18 +23,6 @@ export default {
 
         osmcLinks.forEach((link) => {
             if(link.sublinks){
-                link.sublinks.forEach((sublink) => {
-                    const sublinkTemplate = 
-                    <template>
-                        <a
-                            class={{sublink.className}}
-                            href={{sublink.href}}
-                        >
-                            {{sublink.label}}
-                        </a>
-                    </template>;
-                    sublinks.pushObject(sublinkTemplate);
-                });
                 const linkTemplate = 
                     <template>
                         <div class="header-link with-child">
@@ -42,12 +30,20 @@ export default {
                             <div
                                 class="header-links-wrapper"
                             >
-                                {{#each sublinks as |sublink|}}{{sublink}}{{/each}}
+                                {{#each link.sublinks as |sublink|}}
+                                <template>
+                                    <a
+                                        class={{sublink.className}}
+                                        href={{sublink.href}}
+                                    >
+                                        {{sublink.label}}
+                                    </a>
+                                </template>
+                                {{/each}}
                             </div>
                         </div>
                     </template>;
                 headerIcons.pushObject(linkTemplate);
-				sublinks.clear();
             } else {
                 const linkTemplate = 
                 <template>
