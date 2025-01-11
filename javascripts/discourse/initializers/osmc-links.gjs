@@ -22,7 +22,7 @@ export default {
 
         osmcLinks.forEach((link) => {
             if(link.sublinks){
-				const sublinks = link.sublinks;
+                const sublinks = link.sublinks;
                 const linkTemplate = 
                     <template>
                         <div class="header-link with-child">
@@ -31,14 +31,12 @@ export default {
                                 class="header-links-wrapper"
                             >
                                 {{#each sublinks as |sublink|}}
-                                    <template>
-                                        <a
-                                            class={{sublink.className}}
-                                            href={{sublink.href}}
-                                        >
-                                            {{sublink.label}}
-                                        </a>
-                                    </template>
+                                    <a
+                                        class={{sublink.className}}
+                                        href={{sublink.href}}
+                                    >
+                                        {{sublink.label}}
+                                    </a>
                                 {{/each}}
                             </div>
                         </div>
