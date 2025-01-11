@@ -1,4 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
+import { A } from '@ember/array';
 
 export default {
   name: "osmc-header-icon-links",
@@ -17,11 +18,10 @@ export default {
         osmcLinks.push({ href: "https://osmc.tv/vero", className: "header-link big pink", label: "Vero V" });
         osmcLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
         
-        let headerIcons = [];
-        let sublinks = [];
+        let headerIcons = A();
+        let sublinks = A();
 
         osmcLinks.forEach((link) => {
-			sublinks = [];
             if(link.sublinks){
                 link.sublinks.forEach((sublink) => {
                     const sublinkTemplate = 
@@ -33,7 +33,7 @@ export default {
                             {{sublink.label}}
                         </a>
                     </template>;
-                    sublinks.push(sublinkTemplate);
+                    sublinks.pushObject(sublinkTemplate);
                 });
                 const linkTemplate = 
                     <template>
@@ -46,7 +46,8 @@ export default {
                             </div>
                         </div>
                     </template>;
-                headerIcons.push(linkTemplate);
+                headerIcons.pushObject(linkTemplate);
+				sublinks.clear();
             } else {
                 const linkTemplate = 
                 <template>
@@ -57,7 +58,7 @@ export default {
                         {{link.label}}
                     </a>
                 </template>;
-                headerIcons.push(linkTemplate);
+                headerIcons.pushObject(linkTemplate);
             }
         });
         api.headerIcons.add("osmc", <template><div class="header-links-wrapper clearfix">{{#each headerIcons as |icon|}}{{icon}}{{/each}}</div></template>, { before: "search" });
