@@ -19,10 +19,10 @@ export default {
         osmcLinks.push({ href: "https://my.osmc.tv/login/?redirect_to=https://my.osmc.tv/my-account/", className: "header-link big blue", label: "My Account" });
         
         let headerIcons = A();
-        let sublinks = A();
 
         osmcLinks.forEach((link) => {
             if(link.sublinks){
+				const sublinks = link.sublinks;
                 const linkTemplate = 
                     <template>
                         <div class="header-link with-child">
@@ -30,15 +30,15 @@ export default {
                             <div
                                 class="header-links-wrapper"
                             >
-                                {{#each link.sublinks as |sublink|}}
-                                <template>
-                                    <a
-                                        class={{sublink.className}}
-                                        href={{sublink.href}}
-                                    >
-                                        {{sublink.label}}
-                                    </a>
-                                </template>
+                                {{#each sublinks as |sublink|}}
+                                    <template>
+                                        <a
+                                            class={{sublink.className}}
+                                            href={{sublink.href}}
+                                        >
+                                            {{sublink.label}}
+                                        </a>
+                                    </template>
                                 {{/each}}
                             </div>
                         </div>
