@@ -33,7 +33,7 @@ export default {
                             {{sublink.label}}
                         </a>
                     </template>;
-                    sublinks.push(sublinkTemplate)
+                    sublinks.push(sublinkTemplate);
                 });
                 const linkTemplate = 
                     <template>
