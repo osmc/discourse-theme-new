@@ -46,7 +46,6 @@ export default {
                         </div>
                     </template>;
                 headerIcons.push(linkTemplate);
-				sublinks = [];
             } else {
                 const linkTemplate = 
                 <template>
@@ -59,6 +58,7 @@ export default {
                 </template>;
                 headerIcons.push(linkTemplate);
             }
+			sublinks = [];
         });
         api.headerIcons.add("osmc", <template><div class="header-links-wrapper clearfix">{{#each headerIcons as |icon|}}{{icon}}{{/each}}</div></template>, { before: "search" });
       } catch (error) {
