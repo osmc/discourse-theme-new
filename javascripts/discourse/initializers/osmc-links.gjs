@@ -23,14 +23,14 @@ export default {
         osmcLinks.forEach((link) => {
             if(link.sublinks){
                 sublinks = [];
-                link.sublinks.map((sublink) => {
+                link.sublinks.forEach((sublink) => {
                     const sublinkTemplate = 
                     <template>
                         <a
-                            class={{link.className}}
-                            href={{link.href}}
+                            class={{sublink.className}}
+                            href={{sublink.href}}
                         >
-                            {{link.label}}
+                            {{sublink.label}}
                         </a>
                     </template>;
                     sublinks.push(sublinkTemplate)
